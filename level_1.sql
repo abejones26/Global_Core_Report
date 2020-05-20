@@ -1,5 +1,6 @@
-SELECT "" AS Duplicate, 
-    [CORP02WK]![Style] & [CORP02WK]![Color] AS [KEY], CORP02WK.[Core Code], 
+SELECT "" AS Duplicate,
+    [CORP02WK]![Style] & [CORP02WK]![Color] AS [KEY], 
+    CORP02WK.[Core Code], 
     CORP02WK.[Supplier Number], 
     Diver.[Plant Code], 
     Diver.[Inventory Type], 
@@ -99,4 +100,7 @@ INNER JOIN Month_Table_6 ON CORP02WK.[Heading Month 6] = Month_Table_6.[Heading 
 INNER JOIN Diver ON CORP02WK.Style = Diver.Style) 
 LEFT JOIN ALP ON WMAWIPSE.[Cut number] = ALP.[Cut Number]) 
 INNER JOIN [Buying Group] ON (CORP02WK.Color = [Buying Group].Color) AND (CORP02WK.Style = [Buying Group].Style)
-ORDER BY CORP02WK.[Core Code], CORP02WK.Style, CORP02WK.Color, WMAWIPSE.[Warehouse Date];
+ORDER BY CORP02WK.[Core Code], 
+    CORP02WK.Style, 
+    CORP02WK.Color, 
+    WMAWIPSE.[Warehouse Date];
