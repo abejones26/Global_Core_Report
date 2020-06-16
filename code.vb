@@ -574,3 +574,21 @@ For i = 2 To 11000
         po = ""
     End If
 Next i
+
+' Adding totals row
+
+For i = 3 To 11000
+        If i = 3 Then
+            sTemp = ws.Cells(i, 2).Value
+        Else
+            If ws.Cells(i, 2).Value <> sTemp Then
+                sTemp = ws.Cells(i, 2).Value
+                ws.Rows(i).EntireRow.Insert
+                ws.Rows(i).EntireRow.Interior.Pattern = xlSolid
+                ws.Rows(i).EntireRow.Interior.PatternColorIndex = xlAutomatic
+                ws.Rows(i).EntireRow.Interior.ThemeColor = xlThemeColorAccent1
+                ws.Rows(i).EntireRow.Interior.TintAndShade = 0.799981688894314
+                ws.Rows(i).EntireRow.Interior.PatternTintAndShade = 0
+            End If
+        End If
+    Next i
