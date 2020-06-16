@@ -161,4 +161,15 @@ lastrow = Cells(Rows.Count, 2).End(xlUp).Row
     Columns("CD:CD").Select
     Selection.NumberFormat = "[$-en-US]d-mmm;@"
 
-    
+'Adding current ship date
+
+    Range("CH2").Select
+    ActiveCell.FormulaR1C1 = "=IF(RC[-1]>0,RC[-1],IF(RC[-2]=RC[-3],"""",RC[-2]))"
+    Range("CH2").Select
+    Selection.AutoFill Destination:=Range("CH2:CH10000")
+    Range("CH2:CH10000").Select
+    Columns("CH:CH").Copy
+    Columns("CH:CH").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
