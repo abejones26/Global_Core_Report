@@ -1101,3 +1101,163 @@ Next i
     Range("L1").Select
     ActiveCell.FormulaR1C1 = "Open"
     Range("M1").Select
+
+' General Formatting
+
+    Columns("H:H").Select
+    Selection.InsertIndent 1
+    Selection.ColumnWidth = 11
+    Columns("I:I").Select
+    Selection.ColumnWidth = 3
+    Columns("I:CK").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Range("M1").Select
+    ActiveCell.FormulaR1C1 = "mo1"
+    Range("N1").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""Frcst "",MONTH(RC[6]),""/"",YEAR(RC[6]))"
+    Range("O1").Select
+    ActiveCell.FormulaR1C1 = "PO"
+    Range("P1:T1").Select
+    Selection.NumberFormat = "[$-en-US]d-mmm;@"
+    Range("U1").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""Rcpts "",MONTH(RC[-1]),""/"",YEAR(RC[-1]))"
+    Range("V1").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""Bal "",MONTH(RC[-2]),""/"",YEAR(RC[-2]))"
+    Range("W1").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""% of "",MONTH(RC[-3]),""/"",YEAR(RC[-3]))"
+    Range("X1").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""Frcst "",MONTH(RC[6]),""/"",YEAR(RC[6]))"
+    Range("Y1").Select
+    ActiveCell.FormulaR1C1 = "PO"
+    Range("U1:Y1").Select
+    Selection.Copy
+    Range("AE1").Select
+    ActiveSheet.Paste
+    Range("AO1").Select
+    ActiveSheet.Paste
+    Range("AY1").Select
+    ActiveSheet.Paste
+    Range("BI1").Select
+    ActiveSheet.Paste
+    Range("BS1").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""Rcpts "",MONTH(RC[-1]),""/"",YEAR(RC[-1]))"
+    Range("BT1").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""Bal "",MONTH(RC[-2]),""/"",YEAR(RC[-2]))"
+    Range("BU1").Select
+    ActiveCell.FormulaR1C1 = "=CONCATENATE(""% of "",MONTH(RC[-3]),""/"",YEAR(RC[-3]))"
+    Range("BV1").Select
+    ActiveCell.FormulaR1C1 = "Frcst"
+    Range("BW1").Select
+    ActiveCell.FormulaR1C1 = "Frcst"
+    Range("BX1").Select
+    Range("Z1:AD1").Select
+    Selection.NumberFormat = "[$-en-US]d-mmm;@"
+    Range("AJ1:AN1").Select
+    Selection.NumberFormat = "[$-en-US]d-mmm;@"
+    Range("AT1:AX1").Select
+    Selection.NumberFormat = "[$-en-US]d-mmm;@"
+    Range("BD1:BH1").Select
+    Selection.NumberFormat = "[$-en-US]d-mmm;@"
+    Range("BN1:BR1").Select
+    Selection.NumberFormat = "[$-en-US]d-mmm;@"
+    Columns("W:W").Select
+    Selection.Style = "Percent"
+    Columns("AG:AG").Select
+    Selection.Style = "Percent"
+    Columns("AQ:AQ").Select
+    Selection.Style = "Percent"
+    Columns("BA:BA").Select
+    Selection.Style = "Percent"
+    Columns("BK:BK").Select
+    Selection.Style = "Percent"
+    Columns("BU:BU").Select
+    Selection.Style = "Percent"
+    Range("BX1").Select
+    ActiveCell.FormulaR1C1 = "SH"
+    Range("BY1").Select
+    ActiveCell.FormulaR1C1 = "PO"
+    Range("BZ1").Select
+    ActiveCell.FormulaR1C1 = "S"
+    Range("CB1").Select
+    ActiveCell.FormulaR1C1 = "SC"
+    Range("CE1").Select
+    ActiveCell.FormulaR1C1 = "Orig Ship"
+    Range("CF1").Select
+    ActiveCell.FormulaR1C1 = "Req Ship"
+    Range("CG1").Select
+    ActiveCell.FormulaR1C1 = "Ship date"
+    Range("CI1").Select
+    ActiveCell.FormulaR1C1 = "ETA"
+    Range("CJ1").Select
+    ActiveCell.FormulaR1C1 = "Via"
+    Range("CK1").Select
+    ActiveCell.FormulaR1C1 = "DC"
+    Columns("CE:CI").Select
+    Selection.NumberFormat = "m/d;@"
+    Selection.ColumnWidth = 5
+    Columns("CM:CM").EntireColumn.AutoFit
+    Columns("CJ:CK").Select
+    Selection.ColumnWidth = 3
+    Columns("CC:CC").Select
+    Selection.ColumnWidth = 6
+    Columns("CA:CB").Select
+    Selection.ColumnWidth = 3
+    Columns("BZ:BZ").Select
+    Selection.ColumnWidth = 2
+    Columns("BX:BX").Select
+    Selection.ColumnWidth = 3
+    Columns("J:BW").Select
+    Selection.ColumnWidth = 6
+    Columns("C:C").Select
+    Selection.ColumnWidth = 1.5
+    Range("S219").Select
+    Columns("M:M").Select
+    Selection.EntireColumn.Hidden = True
+    Range("Q12").Select
+    Range("AB28").Select
+    Columns("BV:BW").Select
+    Selection.EntireColumn.Hidden = True
+    Columns("D:D").Select
+    Selection.EntireColumn.Hidden = True
+    Columns("F:G").Select
+    Selection.Columns.Group
+    Columns("O:T").Select
+    Selection.Columns.Group
+    Columns("N:V").Select
+    Selection.Columns.Group
+    Columns("Y:AD").Select
+    Selection.Columns.Group
+    Columns("X:AF").Select
+    Selection.Columns.Group
+    Columns("AI:AN").Select
+    Selection.Columns.Group
+    Columns("AH:AP").Select
+    Selection.Columns.Group
+    Columns("AS:AX").Select
+    Selection.Columns.Group
+    Columns("AR:AZ").Select
+    Selection.Columns.Group
+    Columns("BC:BH").Select
+    Selection.Columns.Group
+    Columns("BB:BJ").Select
+    Selection.Columns.Group
+    Columns("BM:BR").Select
+    Selection.Columns.Group
+    Columns("BL:BT").Select
+    Selection.Columns.Group
+    Range("BR5").Select
+    Columns("BZ:CB").Select
+    Selection.Columns.Group
+    Columns("CF:CH").Select
+    Selection.Columns.Group
+    Columns("CM:CM").Select
+    Selection.Columns.Group
