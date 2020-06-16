@@ -742,3 +742,63 @@ For i = 2 To 11000
         open_qty_total = open_qty_total + Cells(i, 20).Value
     End If
 Next i
+
+' Week 6 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 26).Value
+        Cells(i, 26).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 26).Value
+    End If
+Next i
+
+' Week 7 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 27).Value
+        Cells(i, 27).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 27).Value
+    End If
+Next i
+
+' Week 8 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 28).Value
+        Cells(i, 28).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 28).Value
+    End If
+Next i
+
+' Week 9 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 29).Value
+        Cells(i, 29).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 29).Value
+    End If
+Next i
+
+' Week 10 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 30).Value
+        Cells(i, 30).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 30).Value
+    End If
+Next i
