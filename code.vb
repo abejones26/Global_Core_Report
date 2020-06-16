@@ -1274,3 +1274,16 @@ Next i
         .TintAndShade = 0
     End With
     Selection.FormatConditions(1).StopIfTrue = False
+
+' PO column
+
+    Columns("BY:BY").Select
+    Selection.FormatConditions.Add Type:=xlTextString, String:="N", _
+        TextOperator:=xlContains
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Bold = True
+        .Italic = False
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
