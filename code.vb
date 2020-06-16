@@ -173,3 +173,31 @@ lastrow = Cells(Rows.Count, 2).End(xlUp).Row
     Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
         :=False, Transpose:=False
     Application.CutCopyMode = False
+
+' Conditional Format for percentage columns
+
+    Range("W:W,AG:AG,AQ:AQ").Select
+    Range("AQ1").Activate
+    Range("W:W,AG:AG,AQ:AQ,BA:BA,BK:BK,BU:BU").Select
+    Range("BU1").Activate
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlGreaterEqual _
+        , Formula1:="=3.5"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Bold = True
+        .Italic = False
+        .ThemeColor = xlThemeColorAccent1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlLessEqual, _
+        Formula1:="=1"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Bold = True
+        .Italic = False
+        .ThemeColor = xlThemeColorAccent2
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    Range("A1").Select
