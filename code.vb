@@ -1083,3 +1083,21 @@ Next i
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
+
+' Labeling and formating first row
+
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "C"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "Primary Vendor"
+    Range("H1").Select
+    ActiveCell.FormulaR1C1 = "Style-Color"
+    Range("I1").Select
+    ActiveCell.FormulaR1C1 = "*"
+    Range("J1").Select
+    ActiveCell.FormulaR1C1 = "Beg Bal"
+    Range("K1").Select
+    ActiveCell.FormulaR1C1 = "Ship"
+    Range("L1").Select
+    ActiveCell.FormulaR1C1 = "Open"
+    Range("M1").Select
