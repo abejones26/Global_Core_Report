@@ -301,3 +301,56 @@ For i = 2 To 11000
         open_qty = 0
     End If
 Next i
+
+For i = 2 To 11000
+    ' Solving for Week 11
+    If Cells(1, 36).Value = "" Then
+        open_qty = 0
+    ElseIf Cells(i, 87).Value > Cells(1, 30).Value And Cells(i, 87).Value <= Cells(1, 36) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 36).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 12
+    If Cells(1, 36).Value = "" Then
+        If Cells(i, 87).Value > Cells(1, 30).Value And Cells(i, 87).Value <= Cells(1, 37) Then
+            open_qty = open_qty + Cells(i, 81).Value
+            Cells(i, 37).Value = open_qty
+            open_qty = 0
+        End If
+    ElseIf Cells(i, 87).Value > Cells(1, 36).Value And Cells(i, 87).Value <= Cells(1, 37) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 37).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 13
+    If Cells(i, 87).Value > Cells(1, 37).Value And Cells(i, 87).Value <= Cells(1, 38) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 38).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 14
+    If Cells(i, 87).Value > Cells(1, 38).Value And Cells(i, 87).Value <= Cells(1, 39) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 39).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 15
+    If Cells(i, 87).Value > Cells(1, 39).Value And Cells(i, 87).Value <= Cells(1, 40) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 40).Value = open_qty
+        open_qty = 0
+    End If
+Next i
