@@ -1261,3 +1261,16 @@ Next i
     Selection.Columns.Group
     Columns("CM:CM").Select
     Selection.Columns.Group
+
+' ETA Column
+
+    Columns("CI:CI").Select
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:="=$CG1>0"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .Bold = True
+        .Italic = False
+        .ThemeColor = xlThemeColorLight2
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
