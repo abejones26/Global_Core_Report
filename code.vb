@@ -1299,3 +1299,15 @@ Next i
         .TintAndShade = 0
     End With
     Selection.FormatConditions(1).StopIfTrue = False
+
+' Shop Code Column
+    
+    Columns("CB:CB").Select
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=LEFT($E1,2)=$CA1"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
