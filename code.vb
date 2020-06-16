@@ -201,3 +201,50 @@ lastrow = Cells(Rows.Count, 2).End(xlUp).Row
     End With
     Selection.FormatConditions(1).StopIfTrue = False
     Range("A1").Select
+
+' Using For loop to enter open units into weekly buckets
+
+For i = 2 To 11000
+    ' Solving for Week 1
+    If Cells(i, 87).Value <= Cells(1, 16).Value Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 16).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 2
+    If Cells(i, 87).Value > Cells(1, 16).Value And Cells(i, 87).Value <= Cells(1, 17) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 17).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 3
+    If Cells(i, 87).Value > Cells(1, 17).Value And Cells(i, 87).Value <= Cells(1, 18) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 18).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 4
+    If Cells(i, 87).Value > Cells(1, 18).Value And Cells(i, 87).Value <= Cells(1, 19) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 19).Value = open_qty
+        open_qty = 0
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Solving for Week 5
+    If Cells(i, 87).Value > Cells(1, 19).Value And Cells(i, 87).Value <= Cells(1, 20) Then
+        open_qty = open_qty + Cells(i, 81).Value
+        Cells(i, 20).Value = open_qty
+        open_qty = 0
+    End If
+Next i
