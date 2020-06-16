@@ -19,3 +19,111 @@ open_qty_total = 0
 month_receipts_total = 0
 balance = 0
 percentage = 0
+
+lastrow = Cells(Rows.Count, 2).End(xlUp).Row
+
+' Adding Duplicate '
+
+    Range("A3").Select
+    ActiveCell.FormulaR1C1 = "=IF(R[-1]C[1]=RC[1],""Duplicate"","""")"
+    Selection.AutoFill Destination:=Range("A3:A10000")
+    Range("A3:A10000").Select
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = ""
+    Range("A1").Select
+    
+' First month dates
+    
+    Range("T1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(WEEKDAY(EOMONTH(TODAY(),R3C13-1))=1,WEEKDAY(EOMONTH(TODAY(),R3C13-1))=2),((EOMONTH(TODAY(),R3C13-1))-WEEKDAY(EOMONTH(TODAY(),R3C13-1)))-14,((EOMONTH(TODAY(),R3C13-1))+6-MOD((EOMONTH(TODAY(),R3C13-1))-1,7))-14)"
+    Range("S1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("R1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("Q1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("P1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    
+' Second month dates
+
+    Range("AD1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(WEEKDAY(EOMONTH(TODAY(),R3C13))=1,WEEKDAY(EOMONTH(TODAY(),R3C13))=2),((EOMONTH(TODAY(),R3C13))-WEEKDAY(EOMONTH(TODAY(),R3C13)))-14,((EOMONTH(TODAY(),R3C13))+6-MOD((EOMONTH(TODAY(),R3C13))-1,7))-14)"
+    Range("AC1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AB1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AA1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("Z1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF((RC[1]-WEEKDAY(RC[1],1))=RC[-6],"""",(RC[1]-WEEKDAY(RC[1],1)))"
+    Range("Y1").Select
+    
+' Third month dates
+
+    Range("AN1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(WEEKDAY(EOMONTH(TODAY(),R3C13+1))=1,WEEKDAY(EOMONTH(TODAY(),R3C13+1))=2),((EOMONTH(TODAY(),R3C13+1))-WEEKDAY(EOMONTH(TODAY(),R3C13+1)))-14,((EOMONTH(TODAY(),R3C13+1))+6-MOD((EOMONTH(TODAY(),R3C13+1))-1,7))-14)"
+    Range("AM1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AL1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AK1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AJ1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF((RC[1]-WEEKDAY(RC[1],1))=RC[-6],"""",(RC[1]-WEEKDAY(RC[1],1)))"
+    Range("AI1").Select
+    
+' Fourth month dates
+
+    Range("AX1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(WEEKDAY(EOMONTH(TODAY(),R3C13+2))=1,WEEKDAY(EOMONTH(TODAY(),R3C13+2))=2),((EOMONTH(TODAY(),R3C13+2))-WEEKDAY(EOMONTH(TODAY(),R3C13+2)))-14,((EOMONTH(TODAY(),R3C13+2))+6-MOD((EOMONTH(TODAY(),R3C13+2))-1,7))-14)"
+    Range("AW1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AV1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AU1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("AT1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF((RC[1]-WEEKDAY(RC[1],1))=RC[-6],"""",(RC[1]-WEEKDAY(RC[1],1)))"
+    Range("AS1").Select
+    
+' Fifth month dates
+
+    Range("BH1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(WEEKDAY(EOMONTH(TODAY(),R3C13+3))=1,WEEKDAY(EOMONTH(TODAY(),R3C13+3))=2),((EOMONTH(TODAY(),R3C13+3))-WEEKDAY(EOMONTH(TODAY(),R3C13+3)))-14,((EOMONTH(TODAY(),R3C13+3))+6-MOD((EOMONTH(TODAY(),R3C13+3))-1,7))-14)"
+    Range("BG1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("BF1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("BE1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("BD1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF((RC[1]-WEEKDAY(RC[1],1))=RC[-6],"""",(RC[1]-WEEKDAY(RC[1],1)))"
+    Range("BC1").Select
+    
+' Six month dates
+
+    Range("BR1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(WEEKDAY(EOMONTH(TODAY(),R3C13+4))=1,WEEKDAY(EOMONTH(TODAY(),R3C13+4))=2),((EOMONTH(TODAY(),R3C13+4))-WEEKDAY(EOMONTH(TODAY(),R3C13+4)))-14,((EOMONTH(TODAY(),R3C13+4))+6-MOD((EOMONTH(TODAY(),R3C13+4))-1,7))-14)"
+    Range("BQ1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("BP1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("BO1").Select
+    ActiveCell.FormulaR1C1 = "=RC[1]-WEEKDAY(RC[1],1)"
+    Range("BN1").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF((RC[1]-WEEKDAY(RC[1],1))=RC[-6],"""",(RC[1]-WEEKDAY(RC[1],1)))"
+    Range("BM1").Select
+
+    
