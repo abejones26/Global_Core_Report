@@ -513,3 +513,64 @@ For i = 2 To 11000
         open_qty = 0
     End If
 Next i
+
+' Adding POs into monthly buckets
+
+For i = 2 To 11000
+    ' Month 1 POs
+    If Cells(i, 87).Value <= Cells(1, 20).Value Then
+        po = Cells(i, 77).Value
+        Cells(i, 15).Value = po
+        po = ""
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Month 2 POs
+    po = ""
+    If Cells(i, 87).Value > Cells(1, 20).Value And Cells(i, 87).Value <= Cells(1, 30).Value Then
+        po = Cells(i, 77).Value
+        Cells(i, 25).Value = po
+        po = ""
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Month 3 POs
+    po = ""
+    If Cells(i, 87).Value > Cells(1, 30).Value And Cells(i, 87).Value <= Cells(1, 40).Value Then
+        po = Cells(i, 77).Value
+        Cells(i, 35).Value = po
+        po = ""
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Month 4 POs
+    po = ""
+    If Cells(i, 87).Value > Cells(1, 40).Value And Cells(i, 87).Value <= Cells(1, 50).Value Then
+        po = Cells(i, 77).Value
+        Cells(i, 45).Value = po
+        po = ""
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Month 5 POs
+    po = ""
+    If Cells(i, 87).Value > Cells(1, 50).Value And Cells(i, 87).Value <= Cells(1, 60).Value Then
+        po = Cells(i, 77).Value
+        Cells(i, 55).Value = po
+        po = ""
+    End If
+Next i
+
+For i = 2 To 11000
+    ' Month 6 POs
+    po = ""
+    If Cells(i, 87).Value > Cells(1, 60).Value And Cells(i, 87).Value <= Cells(1, 70).Value Then
+        po = Cells(i, 77).Value
+        Cells(i, 65).Value = po
+        po = ""
+    End If
+Next i
