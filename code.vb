@@ -1042,3 +1042,11 @@ For i = 2 To 11000
         open_qty_total = open_qty_total + Cells(i, 70).Value
     End If
 Next i
+
+' Page Layout '
+
+    Cells.Select
+    Selection.Font.Size = 10
+    ActiveWindow.DisplayGridlines = False
+    ActiveWindow.Zoom = 80
+    Range("A1").Select
