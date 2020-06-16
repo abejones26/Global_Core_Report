@@ -1311,3 +1311,25 @@ Next i
         .TintAndShade = 0
     End With
     Selection.FormatConditions(1).StopIfTrue = False
+
+For i = 3 To 11000
+    If i = 3 Then
+        sTemp = ws.Cells(i, 2).Value
+    Else
+        If ws.Cells(i, 2).Value <> sTemp Then
+            sTemp = ws.Cells(i, 2).Value
+            ws.Rows(i).EntireRow.Insert
+            ws.Rows(i).EntireRow.Interior.Pattern = xlNone
+            ws.Rows(i).EntireRow.Interior.TintAndShade = 0
+            ws.Rows(i).EntireRow.Interior.PatternTintAndShade = 0
+            ws.Rows(i).EntireRow.Borders(xlDiagonalDown).LineStyle = xlNone
+            ws.Rows(i).EntireRow.Borders(xlDiagonalUp).LineStyle = xlNone
+            ws.Rows(i).EntireRow.Borders(xlEdgeLeft).LineStyle = xlNone
+            ws.Rows(i).EntireRow.Borders(xlEdgeTop).LineStyle = xlNone
+            ws.Rows(i).EntireRow.Borders(xlEdgeBottom).LineStyle = xlNone
+            ws.Rows(i).EntireRow.Borders(xlEdgeRight).LineStyle = xlNone
+            ws.Rows(i).EntireRow.Borders(xlInsideVertical).LineStyle = xlNone
+            ws.Rows(i).EntireRow.Borders(xlInsideHorizontal).LineStyle = xlNone
+        End If
+    End If
+Next i
