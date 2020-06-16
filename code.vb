@@ -126,4 +126,20 @@ lastrow = Cells(Rows.Count, 2).End(xlUp).Row
         "=IF((RC[1]-WEEKDAY(RC[1],1))=RC[-6],"""",(RC[1]-WEEKDAY(RC[1],1)))"
     Range("BM1").Select
 
+    ' Removing code for weekly dates
+
+    Range("P1:BR1").Select
+    Range("P1:BR1").Copy
+    Range("P1:BR1").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
     
+' Removing code for Duplicate column
+
+    Columns("A:A").Select
+    Columns("A:A").Copy
+    Columns("A:A").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
