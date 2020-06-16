@@ -1287,3 +1287,15 @@ Next i
         .TintAndShade = 0
     End With
     Selection.FormatConditions(1).StopIfTrue = False
+
+' Seq Cut Number column
+
+    Columns("BZ:BZ").Select
+    Selection.FormatConditions.Add Type:=xlCellValue, Operator:=xlEqual, _
+        Formula1:="=0"
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
