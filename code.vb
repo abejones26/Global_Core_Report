@@ -683,4 +683,62 @@ For i = 3 To 11000
         :=False, Transpose:=False
     Application.CutCopyMode = False
 
-    
+' Week 1 total
+
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 16).Value
+        Cells(i, 16).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 16).Value
+    End If
+Next i
+
+' Week 2 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 17).Value
+        Cells(i, 17).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 17).Value
+    End If
+Next i
+
+' Week 3 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 18).Value
+        Cells(i, 18).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 18).Value
+    End If
+Next i
+
+' Week 4 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 19).Value
+        Cells(i, 19).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 19).Value
+    End If
+Next i
+
+' Week 5 total
+open_qty_total = 0
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 20).Value
+        Cells(i, 20).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 20).Value
+    End If
+Next i
