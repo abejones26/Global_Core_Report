@@ -143,3 +143,22 @@ lastrow = Cells(Rows.Count, 2).End(xlUp).Row
     Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
         :=False, Transpose:=False
     Application.CutCopyMode = False
+
+' rcptmonth Macro
+
+    Range("CD2").Select
+    ActiveCell.FormulaR1C1 = _
+        "=IF(OR(WEEKDAY(EOMONTH(RC[5],0))=1,WEEKDAY(EOMONTH(RC[5],0))=2),((EOMONTH(RC[5],0))-WEEKDAY(EOMONTH(RC[5],0)))-14,((EOMONTH(RC[5],0))+6-MOD((EOMONTH(RC[5],0))-1,7))-14)"
+    Range("CD2").Select
+    Selection.AutoFill Destination:=Range("CD2:CD10000")
+    Range("CD2:CD10000").Select
+    Columns("CD:CD").Select
+    Columns("CD:CD").Copy
+    Columns("CD:CD").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    Columns("CD:CD").Select
+    Selection.NumberFormat = "[$-en-US]d-mmm;@"
+
+    
