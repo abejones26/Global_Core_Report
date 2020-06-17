@@ -1828,3 +1828,18 @@ For i = 2 To 11000
         space = "Space"
     End If
 Next i
+
+    Columns("A:CM").Select
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:="=$A1=""Space"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).Borders(xlTop)
+        .LineStyle = xlContinuous
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    Range("A1").Select
