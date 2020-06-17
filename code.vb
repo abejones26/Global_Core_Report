@@ -1450,3 +1450,15 @@ Columns("B:N").Select
     Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
         :=False, Transpose:=False
     Application.CutCopyMode = False
+
+' Totals for Open Qty column
+
+For i = 2 To 11000
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        open_qty_total = open_qty_total + Cells(i, 81).Value
+        Cells(i - 1, 81).Value = open_qty_total
+        open_qty_total = 0
+    Else
+        open_qty_total = open_qty_total + Cells(i, 81).Value
+    End If
+Next i
