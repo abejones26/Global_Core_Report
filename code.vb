@@ -1333,3 +1333,120 @@ For i = 3 To 11000
         End If
     End If
 Next i
+
+Columns("B:N").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("B:N").Select
+    Columns("B:N").Copy
+    Columns("B:N").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    Columns("U:X").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("U:X").Select
+    Columns("U:X").Copy
+    Columns("U:X").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    Columns("AE:AH").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("AE:AH").Select
+    Columns("AE:AH").Copy
+    Columns("AE:AH").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    Range("AE8").Select
+    Columns("AO:AR").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("AO:AR").Select
+    Columns("AO:AR").Copy
+    Columns("AO:AR").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    Columns("AY:BB").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("AY:BB").Select
+    Columns("AY:BB").Copy
+    Columns("AY:BB").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Columns("BI:BL").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("BI:BL").Select
+    Columns("BI:BL").Copy
+    Columns("BI:BL").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    Columns("BW:BW").Select
+    Selection.EntireColumn.Hidden = False
+    Columns("BS:BW").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("BS:BW").Select
+    Columns("BS:BW").Copy
+    Columns("BS:BW").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
+    Columns("BW:BW").Select
+    Selection.EntireColumn.Hidden = True
+    Columns("CM:CM").Select
+    Selection.SpecialCells(xlCellTypeBlanks).Select
+    Application.CutCopyMode = False
+    Selection.FormulaR1C1 = "=R[-1]C"
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Columns("CM:CM").Select
+    Columns("CM:CM").Copy
+    Columns("CM:CM").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+    Application.CutCopyMode = False
