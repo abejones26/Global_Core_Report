@@ -1725,3 +1725,93 @@ Next i
     Selection.Borders(xlInsideVertical).LineStyle = xlNone
     Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
     Range("CL1").Select
+
+' White Out
+    
+    Columns("A:N").Select
+    Range("N1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    
+    Columns("U:X").Select
+    Range("X1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+
+    Columns("AE:AH").Select
+    Range("AH1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    
+    Columns("AO:AR").Select
+    Range("AR1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    
+    Columns("AY:BB").Select
+    Range("BB1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    
+    Columns("BI:BL").Select
+    Range("BL1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    
+    Columns("BS:BU").Select
+    Range("BU1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
+    
+    Columns("CM").Select
+    Range("CM1").Activate
+    Selection.FormatConditions.Add Type:=xlExpression, Formula1:= _
+        "=$A1=""DUPLICATE"""
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1).Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).StopIfTrue = False
