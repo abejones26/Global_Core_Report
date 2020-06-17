@@ -1843,3 +1843,18 @@ Next i
     End With
     Selection.FormatConditions(1).StopIfTrue = False
     Range("A1").Select
+
+' Page layout
+
+    Columns("A:B").Select
+    Selection.EntireColumn.Hidden = True
+    Range("J2").Select
+    ActiveWindow.FreezePanes = True
+    Columns("CN:CN").Select
+    Range(Selection, Selection.End(xlToRight)).Select
+    Selection.Delete Shift:=xlToLeft
+    Selection.Clear
+    Selection.Delete Shift:=xlToLeft
+    Range("J2").Select
+
+End Sub
