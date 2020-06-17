@@ -1815,3 +1815,16 @@ Next i
         .TintAndShade = 0
     End With
     Selection.FormatConditions(1).StopIfTrue = False
+
+' Space
+
+For i = 2 To 11000
+
+    If Cells(i, 2).Value <> Cells(i + 1, 2).Value Then
+        space = "Space"
+        Cells(i, 1).Value = space
+        space = ""
+    Else
+        space = "Space"
+    End If
+Next i
